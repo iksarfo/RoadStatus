@@ -1,0 +1,28 @@
+source https://www.nuget.org/api/v2
+
+nuget Newtonsoft.Json 12.0.1 restriction: >= net472
+nuget Xbehave 2.4.0 restriction: >= net472
+nuget Xbehave.Core 2.4.0 restriction: >= net472
+nuget xunit 2.4.0 restriction: >= net472
+nuget xunit.abstractions 2.0.2 restriction: >= net472
+nuget xunit.analyzers 0.10.0 restriction: >= net472
+nuget xunit.assert 2.4.0 restriction: >= net472
+nuget xunit.core 2.4.0 restriction: >= net472
+nuget xunit.extensibility.core 2.4.0 restriction: >= net472
+nuget xunit.extensibility.execution 2.4.0 restriction: >= net472
+
+// [ FAKE GROUP ]
+group Build
+    storage none
+    source https://api.nuget.org/v3/index.json
+    nuget Fake.DotNet.Cli
+	nuget Fake.DotNet.Testing.XUnit2
+    nuget Fake.IO.FileSystem
+    nuget Fake.Core.Target
+
+group BuildResources
+  source https://www.nuget.org/api/v2
+  framework: net472
+  storage: packages
+
+  nuget xunit.runner.console

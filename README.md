@@ -21,7 +21,7 @@ Build instructions
 4. Finally, from the root folder run `fake run build.fsx --target Test`
 
 That final step should have restored packages, built the solution and run the unit tests.
-You may verify that this has worked by confirming that the file **RoadStats.exe** exists in the `/bin/release` folder. Please ignore errors from xUnit2 - the key thing to note is that no tests have failed.
+You may verify that this has worked by confirming that the file **RoadStats.exe** exists in the `/bin/release` folder. Please ignore errors from xUnit2 - the key thing is that no tests have failed.
 
 Running the application
 -----------------------
@@ -32,7 +32,7 @@ In this example output is shown below for the [A2 road](https://www.londontraffi
 
 ```
 The status of the A2 is as follows
-    Road Status is Serious`
+    Road Status is Serious
     Road Status Description is Serious Delays
 ```
 
